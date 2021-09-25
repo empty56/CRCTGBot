@@ -25,7 +25,6 @@ public class Database {
 
     Database() {
         Logger.getLogger("org.mongodb.driver").setLevel(Level.OFF);
-        Dotenv dotenv = Dotenv.configure().directory("F:\\Java\\MFPBot\\src\\main").load();
         mongo = new MongoClient(new MongoClientURI(Objects.requireNonNull(dotenv.get("DB_CONNECT"))));
         MongoDatabase database = mongo.getDatabase("TGBotSettings");
         settingsCollection = database.getCollection("Settings");

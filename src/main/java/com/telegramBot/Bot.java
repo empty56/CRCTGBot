@@ -23,7 +23,6 @@ import java.util.ArrayList;
 @NoArgsConstructor
 public class Bot extends TelegramLongPollingBot {
 
-    private Dotenv dotenv = Dotenv.configure().directory("F:\\Java\\MFPBot\\src\\main").load();
     @Setter
     @Getter
     String userName = dotenv.get("BOT_NAME");
