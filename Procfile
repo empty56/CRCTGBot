@@ -1,1 +1,1 @@
-web: java -jar target/MFPBot-1.0-SNAPSHOT.jar
+release: java -jar target/MFPBot-1.0-SNAPSHOT.jar
