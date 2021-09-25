@@ -2,8 +2,6 @@ package com.telegramBot;
 
 import lombok.*;
 import io.github.cdimascio.dotenv.Dotenv;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.TelegramBotsApi;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
@@ -25,7 +23,6 @@ import java.util.ArrayList;
 @NoArgsConstructor
 public class Bot extends TelegramLongPollingBot {
 
-    private static final Logger log = LogManager.getLogger(Bot.class);
     private Dotenv dotenv = Dotenv.configure().directory("F:\\Java\\MFPBot\\src\\main").load();
     @Setter
     @Getter
@@ -877,10 +874,8 @@ public class Bot extends TelegramLongPollingBot {
         TelegramBotsApi telegramBotsApi  = new TelegramBotsApi(DefaultBotSession.class);
         try {
             telegramBotsApi.registerBot(this);
-            log.info("TelegramAPI started. Look for messages");
             timer.setBankTimer(this);
         } catch (TelegramApiRequestException e) {
-            log.error("Cant Connect. Pause " + 10000 / 1000 + "sec and try again. Error: " + e.getMessage());
             try {
                 Thread.sleep(10000);
             } catch (InterruptedException e1) {
