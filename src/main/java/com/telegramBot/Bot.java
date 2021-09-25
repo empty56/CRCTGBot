@@ -865,7 +865,6 @@ public class Bot extends TelegramLongPollingBot {
                     }
                 }
             }
-            log.debug("new Update receive");
         }
     }
 
