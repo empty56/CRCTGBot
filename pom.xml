@@ -20,6 +20,14 @@
         </plugins>
     </build>
 
+    <properties>
+        <plugin>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>4.0.0</version>
+        </plugin>
+    </properties>
+
+
     <dependencies>
 
         <dependency>
