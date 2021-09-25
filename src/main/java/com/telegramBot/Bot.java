@@ -25,10 +25,10 @@ public class Bot extends TelegramLongPollingBot {
 
     @Setter
     @Getter
-    String userName = dotenv.get("BOT_NAME");
+    String userName = System.getenv("BOT_NAME");
     @Setter
     @Getter
-    String token = dotenv.get("BOT_TOKEN");
+    String token = System.getenv("BOT_TOKEN");
 
     @Getter
     @Setter
