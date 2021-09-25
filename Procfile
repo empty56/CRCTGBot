@@ -1,1 +1,1 @@
-worker: sh target/bin/MFPBot
+web: sh target/bin/MFPBot
