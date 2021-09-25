@@ -1,7 +1,7 @@
 package com.telegramBot;
 
 import lombok.*;
-
+import io.github.cdimascio.dotenv.Dotenv;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
@@ -26,13 +26,13 @@ import java.util.ArrayList;
 public class Bot extends TelegramLongPollingBot {
 
     private static final Logger log = LogManager.getLogger(Bot.class);
-
+    private Dotenv dotenv = Dotenv.configure().directory("F:\\Java\\MFPBot\\src\\main").load();
     @Setter
     @Getter
-    String userName = "@UkrCRCheckerBot";
+    String userName = dotenv.get("BOT_NAME");
     @Setter
     @Getter
-    String token = "2025295170:AAEkKuomrpRX_q8QcaqWX8n0ygbAVCmbtFU";
+    String token = dotenv.get("BOT_TOKEN");
 
     @Getter
     @Setter

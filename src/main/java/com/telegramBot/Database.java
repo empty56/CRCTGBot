@@ -8,6 +8,7 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.model.UpdateOptions;
 import com.mongodb.client.model.Updates;
+import io.github.cdimascio.dotenv.Dotenv;
 import org.bson.Document;
 import org.bson.conversions.Bson;
 import org.slf4j.LoggerFactory;
@@ -24,7 +25,8 @@ public class Database {
 
     Database() {
         Logger.getLogger("org.mongodb.driver").setLevel(Level.OFF);
-        mongo = new MongoClient(new MongoClientURI("mongodb+srv://Empty56:zRo28_skG@crccheckerbot.lxety.mongodb.net/test"));
+        Dotenv dotenv = Dotenv.configure().directory("F:\\Java\\MFPBot\\src\\main").load();
+        mongo = new MongoClient(new MongoClientURI(Objects.requireNonNull(dotenv.get("DB_CONNECT"))));
         MongoDatabase database = mongo.getDatabase("TGBotSettings");
         settingsCollection = database.getCollection("Settings");
     }
