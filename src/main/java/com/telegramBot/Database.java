@@ -25,7 +25,7 @@ public class Database {
 
     Database() {
         Logger.getLogger("org.mongodb.driver").setLevel(Level.OFF);
-        mongo = new MongoClient(new MongoClientURI(Objects.requireNonNull(System.getenv("DB_CONNECT"))));
+        mongo = new MongoClient(new MongoClientURI(System.getenv("DB_CONNECT")));
         MongoDatabase database = mongo.getDatabase("TGBotSettings");
         settingsCollection = database.getCollection("Settings");
     }
