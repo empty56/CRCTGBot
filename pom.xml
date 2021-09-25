@@ -27,7 +27,7 @@
                     <assembleDirectory>target</assembleDirectory>
                     <programs>
                         <program>
-                            <mainClass>CurrencyTelegramBot</mainClass>
+                            <mainClass>App</mainClass>
                             <name>currencyBot</name>
                         </program>
                     </programs>
