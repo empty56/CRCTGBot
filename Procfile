@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -cp target/classes:target/dependency/* com.telegramBot.App
+worker: sh target/bin/MFPBot

@@ -1,1 +1,9 @@
-Bot.class
+com\telegramBot\Bot.class
+com\telegramBot\NotificationTimer.class
+com\telegramBot\BankTask.class
+com\telegramBot\Database.class
+com\telegramBot\Settings.class
+com\telegramBot\Bank.class
+com\telegramBot\InfoConfigurator.class
+com\telegramBot\NotificationTask.class
+com\telegramBot\App.class
