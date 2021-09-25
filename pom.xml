@@ -23,7 +23,7 @@
     <properties>
         <plugin>
             <artifactId>maven-compiler-plugin</artifactId>
-            <version>4.0.0</version>
+            <version>3.6.2</version>
         </plugin>
     </properties>
 
@@ -92,6 +92,5 @@
         </dependency>
 
     </dependencies>
-
 
 </project>
