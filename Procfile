@@ -1,1 +1,1 @@
-worker: sh target/classes/com/telegramBot/App
+worker: java -jar target/
