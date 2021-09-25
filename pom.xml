@@ -21,10 +21,9 @@
     </build>
 
     <properties>
-        <plugin>
+        <plugin/>
             <artifactId>maven-compiler-plugin</artifactId>
             <version>3.6.2</version>
-        </plugin>
     </properties>
 
 
