@@ -33,13 +33,13 @@ class NotificationTimer {
         Calendar cal = Calendar.getInstance();
         cal.set(1970, Calendar.JANUARY, 1);
         DateFormat dateFormat = new SimpleDateFormat("k:mm", new Locale("en"));
-        if (dateFormat.parse(bot.settings.notification).getTime() > cal.getTimeInMillis())
+        if (dateFormat.parse(bot.settings.notification).getTime() - 10800000 > cal.getTimeInMillis())
         {
-            delay = dateFormat.parse(bot.settings.notification).getTime() - cal.getTimeInMillis();
+            delay = dateFormat.parse(bot.settings.notification).getTime() - 10800000 - cal.getTimeInMillis();
         }
         else
         {
-            delay = 86400000 + dateFormat.parse(bot.settings.notification).getTime() - cal.getTimeInMillis();
+            delay = 86400000 + dateFormat.parse(bot.settings.notification).getTime() - 10800000 - cal.getTimeInMillis();
         }
         mTimer.schedule(mMyTimerTask, delay);
     }
