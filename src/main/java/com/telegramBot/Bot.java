@@ -46,7 +46,7 @@ public class Bot extends TelegramLongPollingBot {
     @Setter
     Bank NBU = new Bank("NBU");
 
-    private NotificationTimer timer = new NotificationTimer();
+    public NotificationTimer timer = new NotificationTimer();
 
     @Override
     public String getBotUsername() {
@@ -751,7 +751,7 @@ public class Bot extends TelegramLongPollingBot {
                     if (settings.notification.equals("14:00")) {
                         break;
                     } else {
-                        database.updateSettings(update.getCallbackQuery().getMessage().getChatId().toString(), "notification", "14:00");
+                        database.updateSettings(update.getCallbackQuery().getMessage().getChatId().toString(), "notification", "13:24");
                         settings.notification = database.getSettings(update.getCallbackQuery().getMessage().getChatId().toString()).notification;
                         timer.setTimer(this, chat_id);
                     }

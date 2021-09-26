@@ -26,6 +26,8 @@ class NotificationTimer {
             mTimer.purge();
             return;
         }
+        mTimer.cancel();
+        mTimer.purge();
         NotificationTask mMyTimerTask = new NotificationTask(bot, chat_id);
         long delay = 0;
         Calendar cal = Calendar.getInstance();
@@ -44,7 +46,7 @@ class NotificationTimer {
     @SneakyThrows
     public void setBankTimer(Bot bot) {
         BankTask mMyTimerTask = new BankTask(bot, this);
-        long delay = 300001;
+        long delay = 300000;
         bankTimer.schedule(mMyTimerTask, delay);
     }
 }
@@ -67,6 +69,7 @@ class NotificationTask extends TimerTask {
         new_message.setChatId(chat_id);
         new_message.setText(answer);
         new_message.setReplyMarkup(bot.startMenu());
+        bot.timer.setTimer(bot, chat_id);
         try {
             bot.execute(new_message);
         } catch (TelegramApiException e) {
