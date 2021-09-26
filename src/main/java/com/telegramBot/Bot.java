@@ -751,7 +751,7 @@ public class Bot extends TelegramLongPollingBot {
                     if (settings.notification.equals("14:00")) {
                         break;
                     } else {
-                        database.updateSettings(update.getCallbackQuery().getMessage().getChatId().toString(), "notification", "13:25");
+                        database.updateSettings(update.getCallbackQuery().getMessage().getChatId().toString(), "notification", "13:27");
                         settings.notification = database.getSettings(update.getCallbackQuery().getMessage().getChatId().toString()).notification;
                         timer.setTimer(this, chat_id);
                     }
