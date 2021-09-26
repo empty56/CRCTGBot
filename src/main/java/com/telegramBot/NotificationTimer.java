@@ -28,6 +28,7 @@ class NotificationTimer {
         }
         mTimer.cancel();
         mTimer.purge();
+        mTimer = new Timer();
         NotificationTask mMyTimerTask = new NotificationTask(bot, chat_id);
         long delay = 0;
         Calendar cal = Calendar.getInstance();
