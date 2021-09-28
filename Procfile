@@ -1,1 +1,1 @@
-worker: java -jar target/MFPBot-1.0-SNAPSHOT.jar
+web: java -jar target/MFPBot-1.0-SNAPSHOT.jar
