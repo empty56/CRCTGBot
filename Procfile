@@ -1,1 +1,1 @@
-worker: sh target
+worker: sh target/MFPBot-1.0-SNAPSHOT.jar
